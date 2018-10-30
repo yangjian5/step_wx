@@ -1,0 +1,34 @@
+@import '../../common/common.wxss';
+
+.form-box{
+    padding-left: 30rpx;
+}
+
+.record-tab-nav{
+    display: inline-block;
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    box-sizing: border-box;
+    text-align: center;
+    color: #c7c7cb;
+}
+.record-tab-nav.on{
+    color: #bcaa8a;
+    border-bottom: 5rpx solid #bcaa8a;
+}
+.record-text{
+    margin:30rpx 20rpx 150rpx 1rpx;
+    font-size: 26rpx;
+}
+
+.goods-log-min {
+  font-size: 21rpx;
+  color: #635BA2;
+}
+
+.bg-image{
+  width: 100%;
+  height: 100%;
+}

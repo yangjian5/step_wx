@@ -1,0 +1,20 @@
+<view class="main">
+
+<block wx:if="{{isShow}}">
+  <image src="/image/kby3.png" class="bg-image" mode="widthFix"></image>
+</block>
+<block wx:else>
+  <view class="form-box record-text">
+    <view wx:for="{{changeGoodLogs}}" wx:for-index="index" wx:for-item="changeGoodLog" wx:key="changeGoodLogShow" style='margin-bottom:50rpx;'>
+      <view class="record-tab-nav.on">历史 -兑换记录</view>
+      <text class="goods-log" space="nbsp"> {{changeGoodLog.createtime}}   </text>
+      <text class="goods-log">兑换了</text> 
+      <text class="goods-log" space="nbsp">  {{changeGoodLog.goodName}}</text>
+      <text class="goods-log" space="nbsp">  {{changeGoodLog.status}}  </text>
+      <text class="goods-log-min" space="nbsp"> 单号: {{changeGoodLog.kdnum}}</text>
+    </view>
+  </view>
+</block>
+
+    
+</view>

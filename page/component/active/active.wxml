@@ -1,0 +1,55 @@
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        <text space="nbsp" style="font-size:18rpx">                                  - 步易，译：不易。每一步都变得有意义。</text>
+    </view>
+    
+    <!-- <view class="address-box">
+        <view class="address-manage">
+            <navigator url="../stepchange/stepchange">步数挑战</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="../ranking/ranking">世界排行榜</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="../ctree/ctree">公益植树</navigator>
+        </view>
+    </view> -->
+
+    
+
+    <view class="newest">
+        <view class="newest-box" >
+            <view class="newest-list">
+                <navigator url="../stepchange/stepchange">
+                    <image src="/image/bushusai.jpg"></image>
+                </navigator>
+                <text class='milky'>步数挑战</text>
+            </view>
+            <view class="newest-list">
+                <navigator url="../ranking/ranking">
+                    <image src="/image/paihang.jpg"></image>
+                </navigator>
+                <text class='milky'>世界排行榜</text>
+            </view>
+            <!-- <view class="newest-list">
+                <navigator url="#">
+                    <image src="/image/zhishu.jpg"></image>
+                </navigator>
+                <text class='milky'>公益植树</text>
+            </view> -->
+            <view class="newest-list">
+                <navigator url="#">
+                    <image src="/image/qidai.jpg"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+
+</view>

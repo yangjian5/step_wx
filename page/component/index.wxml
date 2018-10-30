@@ -1,0 +1,79 @@
+<view class="main">
+  <view class="wrap"> 
+    <view class='coin-q'>
+    <image style="width: 40rpx; height: 40rpx; background-color: #eeeeee; margin-left:10rpx;margin-top:10rpx;" mode="aspectFit" src="/image/nglb.jpg"></image>
+    <font style="color:#635BA2; font-weight:normal; font-size:14px;font-style:italic;"> {{coinNum}}</font>
+    </view>
+
+
+    <view class='step-q'> 
+      <canvas class="cir" style="width:380rpx; height:370rpx;margin: auto; " canvas-id="canvasArc" bindtouchend="changeCoin"> 
+      </canvas> 
+    </view>
+    <view class='fxbtn-v'>
+    <button open-type="share" type='primary' class='fxbtn'>邀请好友得步数</button>
+    </view>
+    <view class="newest fengexian">
+        <!-- <view class="friend-title"><text>邀请好友得2%加成，及3000步奖励</text></view> -->
+        <view class="friend-box" >
+            <view class="friend-list" wx:for="{{friends}}" wx:for-index="index" wx:for-item="friend" wx:key="friendsShow">
+              <image mode="aspectFit" src="{{friend}}"></image>
+            </view>
+            <view class="friend-list1">
+                <text class='friend-text'>{{jiaChen}} %</text>
+                <text class='friend-text1'>加成</text>
+            </view>
+        </view>
+        <view class="friend-title"><text>好友加成 +{{JiaChenStep}}步 | 好友奖励 +{{rewardStep}}步，已放入您的可兑换步数</text></view>
+        
+    </view>
+
+     
+    
+    </view>    
+<view class="newest">
+    <view class="newest-title"><text>新人专享 </text> <text style="font-size:18rpx;font-style:italic;"> ——免费兑换&包邮</text></view>
+    <view class="newest-box" >
+        <view class="newest-list" wx:for="{{newUserGoods}}" wx:for-index="index" wx:for-item="newUserGood" wx:key="newUserGoodsShow">
+            <navigator url="/page/component/details/details?goodId={{newUserGood.id}}">
+                <image src="{{newUserGood.imagesurl}}"></image>
+                <view class="newest-text">
+                  <text space="nbsp">{{newUserGood.goodName}}    </text>
+                  <image style="width: 26rpx; height: 26rpx;" mode="aspectFit" src="/image/nglb.jpg"></image>
+                  <text style='font-style: italic;'> .{{newUserGood.salecoin}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="newest">
+    <view class="newest-title"><text>达人专区</text><text style="font-size:18rpx;font-style:italic;"> ——免费兑换&包邮</text></view>
+    <view class="newest-box" >
+        <view class="newest-list" wx:for="{{darenGoods}}" wx:for-index="index" wx:for-item="darenGood" wx:key="darenGoodsShow">
+            <navigator url="/page/component/details/details?goodId={{darenGood.id}}">
+                <image src="{{darenGood.imagesurl}}"></image>
+                <view class="newest-text">
+                  <text space="nbsp">{{darenGood.goodName}}    </text>
+                  <image style="width: 26rpx; height: 26rpx;" mode="aspectFit" src="/image/nglb.jpg"></image>
+                  <text style='font-style: italic;'> .{{darenGood.salecoin}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="newest">
+    <view class="newest-title"><text>精品专区</text><text style="font-size:18rpx;font-style:italic;"> ——免费兑换&包邮</text></view>
+    <view class="newest-box" >
+        <view class="newest-list" wx:for="{{jingpinGoods}}" wx:for-index="index" wx:for-item="jingpinGood" wx:key="jingpinGoodsShow">
+            <navigator url="/page/component/details/details?goodId={{jingpinGood.id}}">
+                <image src="{{jingpinGood.imagesurl}}"></image>
+                <view class="newest-text">
+                  <text space="nbsp">{{jingpinGood.goodName}}    </text>
+                  <image style="width: 26rpx; height: 26rpx;" mode="aspectFit" src="/image/nglb.jpg"></image>
+                  <text style='font-style: italic;'> .{{jingpinGood.salecoin}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
+</view>

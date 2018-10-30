@@ -1,0 +1,98 @@
+@import '../../common/common.wxss';
+
+.header{
+    position: relative;
+    height: 160rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: #AB956D;
+    font-size: 28rpx;
+    color: #fff;
+}
+.header .thumb{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.header .about{
+    float: right;
+}
+
+.slide-image{
+    width:620rpx;
+    height:240rpx;
+    overflow:show;
+    border-radius: 40rpx 40rpx 40rpx 40rpx;
+}
+.img-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 240rpx;
+  margin-top: 20rpx;
+  position:relative;
+}
+
+.text1 {
+  font-size: 36rpx;
+  color: #F8F8FF;
+  top: 6rpx; 
+  left: 88rpx;
+  position: absolute;
+  font-weight:bold;
+}
+
+.text2 {
+  font-size: 60rpx;
+  color: #F8F8FF;
+  top: 100rpx; 
+  left: 150rpx;
+  letter-spacing:5rpx;
+  font-weight:bold;
+  position: absolute;
+  text-align: center;
+}
+
+.text3 {
+  font-size: 18rpx;
+  color: #F8F8FF;
+  top: 170rpx; 
+  left: 170rpx;
+  position: absolute;
+  text-align: center;
+}
+
+.text4 {
+  font-size: 60rpx;
+  color: #F8F8FF;
+  top: 100rpx; 
+  left: 455rpx;
+  letter-spacing:5rpx;
+  font-weight:bold;
+  position: absolute;
+  text-align: center;
+}
+
+.text5 {
+  font-size: 18rpx;
+  color: #F8F8FF;
+  top: 170rpx; 
+  left: 480rpx;
+  position: absolute;
+  text-align: center;
+}
+
+
+/* .child { 
+  width: 620rpx; 
+  height: 120px;
+  position: absolute;
+  left: 90rpx; 
+  color: white;
+  font-size: 32rpx;
+} */

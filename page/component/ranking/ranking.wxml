@@ -1,0 +1,30 @@
+<include src="../wxSearchView/wxSearchView.wxml" />
+
+
+
+<view class="news">
+    <view class="news_list" wx:for="{{rankList}}" wx:for-index="index" wx:for-item="rank" wx:key="changeRankShow">
+
+    <navigator class="child" url="../usershow/usershow?showUserId={{rank.userid}}&avatarurl={{rank.avatarurl}}&nickname={{rank.nickname}}">
+        <view class="news_left">
+            <image src="{{rank.avatarurl}}"></image>
+            <text class="news_date">{{rank.nickname}}</text>
+        </view>
+
+    </navigator>
+        <view class="news_right">
+            <text space="nbsp" class="news_title news_text">       第{{index+1}}名    -总经验：{{rank.sumstep}} </text> 
+            <text class="news_subTitle news_text">{{rank.showtitle}}</text>
+            
+            <view class="news_data">
+                  <image src="{{zanUser.avatarurl}}" wx:for="{{rank.zanUser}}" wx:for-index="index" wx:for-item="zanUser" wx:key="zanUserShow"></image>          
+            </view>
+        </view>
+
+
+          <view  style="flex:1;">
+            <button bindtap='submitZan' class='btn' id="{{rank.userid}}">点赞</button>
+          </view>
+        
+    </view>
+</view>

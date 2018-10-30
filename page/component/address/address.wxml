@@ -1,0 +1,19 @@
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="formSubmit">
+            <input value="{{address.username}}" name="name" placeholder="姓名"/>
+            
+            <input type="number" name="phone" value="{{address.telnum}}" placeholder="电话号码"/>
+
+            <input name="cityInfo" value="{{cityinfo}}" placeholder="省市选择" bindfocus='translate'/>
+
+            <input name="detail" value="{{address.addressinfo}}" placeholder="详细地址"/>
+
+            <button class="btn" form-type="submit">保 存</button>
+        </form>
+    </view>
+
+    <import src="../model/model.wxml"/>
+    <template is="areaData" data="{{...item}}"/>
+    
+</view>

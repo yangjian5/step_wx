@@ -1,0 +1,32 @@
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        <text class="about">ID: {{userId}}</text>
+    </view>
+    <view class="address-box" style='margin-top: 20rpx;'>
+        <view class="address-manage">
+            <navigator url="/page/component/address/address?userId={{userId}}">地 址 管 理</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/page/component/record/record?userId={{userId}}">兑 换 记 录</navigator>
+        </view>
+    </view>
+    <view class="address-box" hidden='{{isUserShow}}'>
+        <view class="address-manage">
+            <navigator url="/page/component/show/show?userId={{userId}}">我 的 展 示</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/page/component/rule/rule">规 则 说 明</navigator>
+        </view>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/page/component/service/service">客服&联系我们</navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<view class='auth-view'>
+  <image mode='aspectFill' src="../../../image/buyi.png" class='auth-img'></image>
+  
+</view>
+<button class="btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"> 进入步易 </button>
+
+

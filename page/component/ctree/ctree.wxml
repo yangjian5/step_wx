@@ -1,0 +1,6 @@
+<image class="img-enter" src="/image/lanse.png"></image>
+
+
+
+<button class='btn' disabled='{{btn_state}}' bindtap='submitEnter' style='color:white'>{{btn_msg}}</button>
+

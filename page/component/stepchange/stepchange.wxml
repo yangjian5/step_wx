@@ -1,0 +1,59 @@
+<view style='margin-top: 40rpx;'></view>
+<view class='img-center'>
+  <navigator class="child" url="../enter/enter?type=4">
+    <image class="slide-image" src="/image/quanqu.png"></image>
+    <text class='.text1'>全区步数挑战 赢大奖</text>
+    <text class='.text2'>{{actives.joinUserCount}}</text>
+    <text class='.text3'>参与人数</text>
+    <text class='.text4'>{{actives.reward}}</text>
+    <text class='.text5'>能量奖励</text>
+  </navigator>
+</view>
+
+<view class='img-center'>
+  <navigator class="child" url="../enter/enter?type=5">
+    <image class="slide-image" src="/image/jianbu.jpg"></image>
+    <text class='.text1'>早起挑战赛 瓜分奖励</text>
+    <text class='.text2'>{{activeFirsts.joinUserCount}}</text>
+    <text class='.text3'>参与人数</text>
+    <text class='.text4'>{{activeFirsts.reward}}</text>
+    <text class='.text5'>能量奖励</text>
+  </navigator>
+</view>
+
+<view class='img-center'>
+  <navigator class="child" url="../enter/enter?type=1">
+    <image class="slide-image" src="/image/jianbusai.jpg"></image>
+    <text class='.text1'>10000步挑战赛 瓜分奖励</text>
+    <text class='.text2'>{{active10s.joinUserCount}}</text>
+    <text class='.text3'>参与人数</text>
+    <text class='.text4'>{{active10s.reward}}</text>
+    <text class='.text5'>能量奖励</text>
+  </navigator>
+</view>
+
+<view class='img-center'>
+  <navigator class="child" url="../enter/enter?type=2">
+    <image class="slide-image" src="/image/jianbusai.jpg"></image>
+    <text class='.text1'>15000步挑战赛 瓜分奖励</text>
+    <text class='.text2'>{{active15s.joinUserCount}}</text>
+    <text class='.text3'>参与人数</text>
+    <text class='.text4'>{{active15s.reward}}</text>
+    <text class='.text5'>能量奖励</text>
+  </navigator>
+</view>
+
+<view class='img-center'>
+  <navigator class="child" url="../enter/enter?type=3">
+    <image class="slide-image" src="/image/jianbusai.jpg"></image>
+    <text class='.text1'>20000步挑战赛 瓜分奖励</text>
+    <text class='.text2'>{{active20s.joinUserCount}}</text>
+    <text class='.text3'>参与人数</text>
+    <text class='.text4'>{{active20s.reward}}</text>
+    <text class='.text5'>能量奖励</text>
+  </navigator>
+</view>
+
+
+
+

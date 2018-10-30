@@ -1,0 +1,61 @@
+<image class="img-enter" src="/image/bisai.jpg"></image>
+
+
+<!-- <block wx:if="{{enterType=='4'}}">
+      <text class='quanqu-text'>步易平台为鼓励全民增强健身意识，提高好友间交流互动，特推出世界排行榜活动。报名方式，进入步数挑战栏内的全区步数挑战赛报名，步易平台为报名者准备了三种心愿奖励可供选择，报名时可任选其一作为挑战成功奖励，最终排名前三十的挑战者可获得心愿奖励，挑战者可通过世界排行榜实时查询挑战排名。
+</text>
+</block> -->
+
+<view class='rule-text'>
+  <block wx:if="{{enterType=='1' || enterType=='2' || enterType=='3'}}">
+    <text style="text-align: center;">  挑战赛规则:\n\n</text>
+    <block wx:if="{{enterType=='1'}}">
+      <text>1. 30 能量报名次日挑战赛\n</text>
+    </block>
+    <block wx:if="{{enterType=='2'}}">
+      <text>1. 50 能量报名次日挑战赛\n</text>
+    </block>
+    <block wx:if="{{enterType=='3'}}">
+      <text>1. 70 能量报名次日挑战赛\n</text>
+    </block>
+    <text>2. 24点前进入步易提交运动步数\n</text>
+    <text>3. 挑战成功活动能量奖励\n</text>    
+    <text>4. 挑战成功者平分本期挑战所有奖励的能量\n</text> 
+    <text>5. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
+  </block>
+  <block wx:elif="{{enterType=='5'}}">
+    <text style="text-align: center;">  挑战赛规则:\n\n</text>
+    <text>1. 10能量报名次日挑战赛\n</text>
+    <text>2. 早上4-6点间起床，进入早起挑战页面签到即视为挑战成功\n</text>
+    <text>3. 所有挑战成功者，平分本期早起挑战赛收益\n</text>    
+    <text>4. 挑战成功者平分本期挑战所有奖励的能量\n</text> 
+    <text>5. 完成奖励：挑战成功者平分本期挑战所有奖励的能量\n</text>
+    <text>6. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
+    <block wx:if="{{zaoqibtnShow}}">
+      <button class='daka-btn' bindtap='dakaEnter' style='color:white'>打卡</button>
+    </block>
+  </block>
+  <block wx:else>
+    <text style="text-align: center;">  世界排行榜活动规则（含点赞）:\n\n</text>
+    <text>1. 10 能量报名全区挑战赛\n</text>
+    <text>2. 挑战时间一个月可随时报名挑战，但活动结束日期不变\n</text>
+    <text>3. 报名成功者可进入全区排行榜查询总步数排名，全区排行榜只显示前一百名选手，其他参赛者可通过搜索框输入ID查询\n</text>
+    <text>4. 每日24点前进入步易提交当日运动步数（可多次提交）超过24点未提交系统自动清零，请注意每日及时提交运动步数避免浪费\n</text>
+    <text>5. 步数获得说明:步数可通过每日行走获得（上限30000步），每邀请一名新注册好友奖励3000步计入总成绩（无上限），每日获得好友点赞一次获得500步奖励（无上限）\n</text>
+    <text>6. 奖励说明:总榜前三十名可获得心愿奖励\n</text>
+    <text>7. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
+  </block>
+</view>
+
+<block wx:if="{{btn_state}}">
+  <view class='join-text'><text>您已经报名，积极备战哦~</text></view>
+  
+</block>
+<block wx:else>
+  <button class='btn' disabled='{{btn_state}}' bindtap='submitEnter' style='color:white'>{{btn_msg}}</button>
+</block>
+
+
+
+
+

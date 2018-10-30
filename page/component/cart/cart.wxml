@@ -1,0 +1,9 @@
+<view class="main">
+
+      <!-- <image class='form-img' src="http://127.0.0.1:8866/build_img.json?daySumStep={{daySumStep}}&userId={{userId}}"></image> -->
+
+
+<canvas canvas-id="myCanvas" style="width:{{canvasWidth}}px; height:{{canvasHeight-50}}px;border: 1px solid #635BA2;margin:30rpx auto"/>
+
+    <button bindtap='saveImg' class='form-button'>保存到相册</button>
+</view>

@@ -1,0 +1,47 @@
+<view class="main">
+  <view class="question-form">
+    <view class="question-input-area">
+      <!-- 问题标题  -->
+      <view class="question-title-wrap">
+        <input class="question-title" placeholder="请输入标题" maxlength="20" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput" value='{{title}}'></input>
+        <view class="title-input-counter">{{titleCount}}/20</view>
+      </view>
+      <!-- 问题正文  -->
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请输入问题的正文内容。" maxlength="260" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 12rem; padding-left: 28rpx;" bindinput="handleContentInput" value='{{content}}'/>
+            <view class="weui-textarea-counter">{{contentCount}}/260</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="question-images-area">
+      <!-- 图片缩略图  -->
+      <view class="question-images">
+        <block wx:for="{{images}}" wx:key="*this">
+          <view class="q-image-wrap">
+            <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+            <view class="q-image-remover" data-idx="{{index}}" data-url="{{item}}" bindtap="removeImage">删除</view>
+          </view>
+        </block>
+      </view>
+
+      <!-- 添加图片按钮  -->
+      <block wx:if="{{images.length<3}}">
+        <view class="question-images-tool" bindtap="chooseImage">
+          <text space="nbsp">                点 击 添 加 个 性 展 示 图</text>
+        </view>
+      </block>
+    </view>
+
+    <!-- 提交表单按钮  -->
+    <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+  </view>
+
+  <view>
+    <canvas style="width: 600px; height: 800px; position: absolute;left:-650px;top:-810px;" canvas-id='attendCanvasId0'></canvas>
+    <canvas style="width: 600px; height: 800px; position: absolute;left:-650px;top:-1650px;" canvas-id='attendCanvasId1'></canvas>
+    <canvas style="width: 600px; height: 800px; position: absolute;left:-650px;top:-2450px;" canvas-id='attendCanvasId2'></canvas>
+  </view>
+</view>

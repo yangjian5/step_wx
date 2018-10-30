@@ -1,0 +1,116 @@
+@import '../../common/common.wxss';
+@import '../model/model.wxss';
+
+.header{
+    position: relative;
+    height: 160rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: #AB956D;
+    font-size: 28rpx;
+    color: #fff;
+}
+.header .thumb{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.header .about{
+    float: right;
+}
+
+page {
+  background: #f6f7f8;
+}
+
+.question-form {
+  margin: 25rpx;
+}
+
+.question-input-area {
+  background-color: #fff;
+  border: 1rpx solid #f2f2f2;
+  border-radius: 4rpx;
+  margin-top: 30rpx;
+}
+
+.question-title-wrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  margin: 10rpx 30rpx;
+  padding: 10rpx 0;
+}
+
+.question-title {
+  flex: 1;
+}
+
+.weui-textarea-counter, .title-input-counter {
+  color: #b3b3b3;
+  font-size: 16px;
+  padding-left: 10rpx;
+}
+
+.weui-cell::before, .weui-cells::before, .weui-cell::after, .weui-cells::after {
+  border: none;
+}
+
+.question-images-area {
+  padding: 20rpx 0;
+  margin-bottom: 100rpx
+}
+
+.question-images-tool {
+  display: flex;
+  align-items: center;
+
+  width: 90%;
+    height: 60rpx;
+    margin:auto;
+    border-radius: 8rpx;
+    text-align: center;
+    background: #f5f6f5;
+    border: black;
+    border-style: dashed;
+    border-width: 1px;
+}
+
+.question-images {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.q-image-wrap {
+  width: 26%;
+  margin:auto; 
+}
+
+.q-image {
+  flex: 1;
+  height: 180rpx;
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.q-image-remover {
+  text-align: center;
+}
+
+.show-list{
+    display: inline-block;
+    width: 180rpx;
+    height: 180rpx;
+    margin:auto;
+    border-radius: 20rpx;
+    text-align: center;
+    background: #f5f6f5;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+}

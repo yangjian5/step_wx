@@ -1,0 +1,19 @@
+<view class="main">
+    <view class="goods-box">
+        <image src="{{goods.imagesurl}}" class="goods-thumb"></image> 
+        
+        <image wx:if="{{show}}" src="/image/cart1.png" class="to-carts-icon"></image>
+        
+        <view class="goods-title">{{goods.goodName}}</view>
+        <view class="goods-operation" bindtap="addToCart">兑   换</view>
+        <view class="goods-price">能量数： {{goods.salecoin}} 
+          <text class="goods-log" space="nbsp">         库存: {{goods.count}}</text></view>
+        </view>
+    <view class="goods-tab-nav.on">兑换记录</view>
+     <view wx:for="{{changeGoodLogs}}" wx:for-index="index" wx:for-item="changeGoodLog" wx:key="changeGoodLogShow">
+        <text class="goods-log" space="nbsp"> {{changeGoodLog.nickname}}   </text>   
+        <text class="goods-log" space="nbsp"> {{changeGoodLog.createtime}}   </text>
+        <text class="goods-log">兑换了</text> 
+        <text class="goods-log" space="nbsp">  {{changeGoodLog.goodName}}</text>
+      </view>
+</view>

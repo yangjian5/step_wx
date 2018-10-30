@@ -1,0 +1,82 @@
+<!-- 仿微信朋友圈 -->
+<scroll-view class='page'>
+  <!-- 列表 -->
+  <view class='CircleList' wx:for='{{DataSource}}' wx:key="DataSourceKey">
+    <!-- 头像、昵称、内容 -->
+    <view class='body-view'>
+      <!-- 头像 -->
+      <!-- <view class='left-view'>
+        <image class='user-icon' src='{{icon}}'></image>
+      </view> -->
+      <view class='right-view'>
+        <!-- 昵称 -->
+        <view class='user-name-view'>
+          <image class='user-icon' src='{{icon}}'></image>
+          <label class='user-name'>{{nickname}}</label>
+        </view>
+        <!-- 内容 -->
+        <view class='user-content-view'>
+          <text class='user-content'>{{content}}</text>
+        </view>
+        <!-- 图片 -->
+        <view class='photo-view'>
+          <view class='photo' wx:for='{{resource}}' wx:key="resourceKey" style='width:{{photoWidth}}px;height:{{photoWidth}}px'>
+            <image bindtap='LookPhoto' data-photUrl='{{item}}' src='{{item}}' style='width:{{photoWidth}}px;height:{{photoWidth}}px'></image>
+          </view>
+        </view>
+        <!-- 地理位置 -->
+        <!-- <view class='user-address-view'>
+          <label>长沙市天心区芙蓉南路四段158号地理信息产业园总部基地A座9楼</label>
+        </view> -->
+
+        <!-- 时间、删除按钮、点赞评论按钮 -->
+        <view class='TDD-view'>
+          <label>2018-07-25 10:14:23</label>
+          <!-- <button bindtap='delete'>删除</button> -->
+          <image data-isShow='{{true}}' bindtap='TouchDiscuss' src='/image/wxdiscuss.png'></image>
+        </view>
+
+        <!-- 点赞 -->
+        <view class='zan-view'>
+          <view class='trigon-view'>
+            <image mode='aspectFill' class='trigon' src='/image/trigon.png'></image>
+          </view>
+
+          <!-- 点赞 -->
+          <!-- <view class='zan-bg-view'>
+            <view class='zan-user-view' wx:for='{{zanSource}}'>
+              <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
+            </view>
+          </view> -->
+          <view class='line'></view>
+          <!-- 评论 -->
+          <view class='discuss-view'>
+            <view class='discuss' wx:for='{{comments}}' wx:key="commentsKey">
+              <label bindtap='TouchZanUser' data-name='{{item.nickname}}' class='discuss-user'>{{item.nickname}}：</label>
+              <label class='content'>{{item.content}}</label>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 评论按钮弹出框 -->
+<view animation="{{animation}}" class='pop-up-box' style='top:{{popTop}}px;width: {{popWidth}}px;' bindtap="modalinput">
+  <text class='up-text' hidden="{{up_text_hidden}}" space="nbsp">  💬 评论  </text>
+</view>
+
+<view hidden="{{hiddenmodalput}}" class="section-input">
+  <input bindinput="bindKeyInput" class="message-input" value='{{inputContent}}' focus="{{name_focus}}"/>
+  <button bindtap="createConent" class='btn-add'>评论</button>
+</view>
+
+
+
+
+
+
+
+

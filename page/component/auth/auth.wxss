@@ -1,0 +1,26 @@
+.auth-view {
+  margin-top: 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 666rpx;
+}
+
+.auth-img {
+    margin-top: 200rpx;
+    width: 366rpx;
+    height: 366rpx;
+    overflow:show;
+    border-radius: 366rpx 366rpx 366rpx 366rpx;
+}
+
+.btn {
+  width: 30%;
+  margin-top: 90rpx;
+  background-color: #635BA2;
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+}
+
