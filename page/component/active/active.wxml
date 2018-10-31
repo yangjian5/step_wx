@@ -1,8 +1,8 @@
 <view class="main">
     <view class="header">
         <image src="{{thumb}}" class="thumb"></image>
-        <text class="nickname">{{nickname}}</text>
-        <text space="nbsp" style="font-size:18rpx">                                  - 步易，译：不易。每一步都变得有意义。</text>
+        <text class="nickname" style="width: 20%;">{{nickname}}</text>
+        <text space="nbsp" style="font-size:18rpx; width: 80%;">                                     - 步易，译：不易。生活不易，步易相伴。</text>
     </view>
     
     <!-- <view class="address-box">

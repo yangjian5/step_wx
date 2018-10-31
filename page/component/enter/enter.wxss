@@ -55,6 +55,8 @@
 }
 
 .rule-text {
+  padding-left: 12rpx;
+  padding-top: 15rpx;
   border: 8rpx dotted orange;
   width: 90%;
   margin-left: 4%;
@@ -62,6 +64,10 @@
   font-size: 20rpx;
   align-items:center;
   text-align: left;
+}
+
+.rule-text text{
+  font-size: 22rpx;
 }
 
 .quanqu-text {

@@ -8,29 +8,29 @@
 
 <view class='rule-text'>
   <block wx:if="{{enterType=='1' || enterType=='2' || enterType=='3'}}">
-    <text style="text-align: center;">  挑战赛规则:\n\n</text>
+    <text style="text-align: center;">  挑战赛规则:\n\n\n</text>
     <block wx:if="{{enterType=='1'}}">
-      <text>1. 30 能量报名次日挑战赛\n</text>
+      <text> 1. 30 能量报名次日挑战赛\n\n</text>
     </block>
     <block wx:if="{{enterType=='2'}}">
-      <text>1. 50 能量报名次日挑战赛\n</text>
+      <text> 1. 50 能量报名次日挑战赛\n\n</text>
     </block>
     <block wx:if="{{enterType=='3'}}">
-      <text>1. 70 能量报名次日挑战赛\n</text>
+      <text> 1. 70 能量报名次日挑战赛\n\n</text>
     </block>
-    <text>2. 24点前进入步易提交运动步数\n</text>
-    <text>3. 挑战成功活动能量奖励\n</text>    
-    <text>4. 挑战成功者平分本期挑战所有奖励的能量\n</text> 
-    <text>5. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
+    <text> 2. 24点前进入步易提交运动步数\n\n</text>
+    <text> 3. 挑战成功活动能量奖励\n\n</text>    
+    <text> 4. 挑战成功者平分本期挑战所有奖励的能量\n\n</text> 
+    <text> 5. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
   </block>
   <block wx:elif="{{enterType=='5'}}">
-    <text style="text-align: center;">  挑战赛规则:\n\n</text>
-    <text>1. 10能量报名次日挑战赛\n</text>
-    <text>2. 早上4-6点间起床，进入早起挑战页面签到即视为挑战成功\n</text>
-    <text>3. 所有挑战成功者，平分本期早起挑战赛收益\n</text>    
-    <text>4. 挑战成功者平分本期挑战所有奖励的能量\n</text> 
-    <text>5. 完成奖励：挑战成功者平分本期挑战所有奖励的能量\n</text>
-    <text>6. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
+    <text style="text-align: center;">  挑战赛规则:\n\n\n</text>
+    <text> 1. 10能量报名次日挑战赛\n\n</text>
+    <text> 2. 早上4-6点间起床，进入早起挑战页面签到即视为挑战成功\n\n</text>
+    <text> 3. 所有挑战成功者，平分本期早起挑战赛收益\n\n</text>    
+    <text> 4. 挑战成功者平分本期挑战所有奖励的能量\n\n</text> 
+    <text> 5. 完成奖励：挑战成功者平分本期挑战所有奖励的能量\n\n</text>
+    <text> 6. 请根据自己的身体情况完成挑战，因此导致的意外均和步易无关\n</text>
     <block wx:if="{{zaoqibtnShow}}">
       <button class='daka-btn' bindtap='dakaEnter' style='color:white'>打卡</button>
     </block>
