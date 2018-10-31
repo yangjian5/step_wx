@@ -4,7 +4,8 @@ var WxSearch = require('../wxSearchView/wxSearchView.js');
 Page({
   data: {
     rankList:[],
-    userId:0
+    userId:0,
+    myRankList:[]
   },
   onLoad: function (options) {
     var self = this;
@@ -20,27 +21,46 @@ Page({
     wx.getStorage({
       key: 'userId',
       success: function (res) {
-        var params = {
-          flag: 1,
-          userId: res.data,
-          opType:'get'
-        };
-        params.sign = authsign.auth_sign(params);
-        wx.request({
-          url: 'https://www.aiwsport.com/step/get_active_top.json',
-          data: params,
-          method: 'GET',
-          success: function (res) {
-            console.log(res)
-            self.setData({
-              rankList: res.data.data
-            })
-          }
-        });
+        self.getActive(self, res.data);
+        self.searchActive(self, res.data);
 
         self.setData({
           userId: res.data
         });
+      }
+    });
+  },
+  searchActive: function (self, userId){
+    var params = {
+      userId: userId,
+      opType: 'search'
+    };
+    params.sign = authsign.auth_sign(params);
+    wx.request({
+      url: 'https://www.aiwsport.com/step/get_active_top.json',
+      data: params,
+      method: 'GET',
+      success: function (res) {
+        self.setData({
+          myRankList: res.data.data
+        })
+      }
+    });
+  },
+  getActive: function (self, userId){
+    var params = {
+      userId: userId,
+      opType: 'get'
+    };
+    params.sign = authsign.auth_sign(params);
+    wx.request({
+      url: 'https://www.aiwsport.com/step/get_active_top.json',
+      data: params,
+      method: 'GET',
+      success: function (res) {
+        self.setData({
+          rankList: res.data.data
+        })
       }
     });
   },
@@ -83,46 +103,17 @@ Page({
   // 搜索回调函数  
   mySearchFunction: function (value) {
     self = this;
-    var params = {
-      flag: 1,
-      userId: value,
-      opType: 'search'
-    };
-    params.sign = authsign.auth_sign(params);
-    wx.request({
-      url: 'https://www.aiwsport.com/step/get_active_top.json',
-      data: params,
-      method: 'GET',
-      success: function (res) {
-        console.log(res)
-        self.setData({
-          rankList: res.data.data
-        })
-      }
-    });
+    self.searchActive(self, value);
+    self.setData({
+      rankList: []
+    })
   },
 
   // 返回回调函数
   myGobackFunction: function () {
     self = this;
-    // 生命周期函数--监听页面显示
-    var params = {
-      flag: 1,
-      userId: self.data.userId,
-      opType: 'get'
-    };
-    params.sign = authsign.auth_sign(params);
-    wx.request({
-      url: 'https://www.aiwsport.com/step/get_active_top.json',
-      data: params,
-      method: 'GET',
-      success: function (res) {
-        console.log(res)
-        self.setData({
-          rankList: res.data.data
-        })
-      }
-    });
+    self.getActive(self, self.data.userId);
+    self.searchActive(self, self.data.userId);
   },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成

@@ -92,10 +92,15 @@ Page({
     ctx.drawImage("/image/paobu.jpg", 0, 0, this.data.canvasWidth, this.data.canvasHeight-50);
     
     ctx.setFillStyle("#fff");
-    ctx.setFontSize(14);                               //字大小
-    ctx.setTextAlign('center');   
-    var str = app.globalData.userInfo.nickName + "  --今日行走 " + this.data.daySumStep+" 步";
-    ctx.fillText(str, 200, 120);
+    ctx.setFontSize(16);                               //字大小
+    ctx.setTextAlign('left');   
+    ctx.fillText(app.globalData.userInfo.nickName, 95, 96);
+
+    ctx.setFillStyle("#fff");
+    ctx.setFontSize(14);                           
+    ctx.setTextAlign('center'); 
+    ctx.fillText("  --今日行走 " + this.data.daySumStep + " 步", 165, 118);
+
     ctx.drawImage(this.data.img, 20, 30, 40, 40);
     ctx.draw();
   },

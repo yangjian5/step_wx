@@ -105,13 +105,13 @@
 
 .weui-icon-search_in-box {
   position: absolute;
-  left: 10px;
+  left: 9px;
   top: 7px;
 }
 
 .weui-search-bar__text {
   display: inline-block;
-  font-size: 14px;
+  font-size: 15px;
   vertical-align: middle;
 }
 
@@ -137,7 +137,7 @@
 .weui-search-bar__input {
   height: 30px;
   line-height: 30px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .weui-icon-clear {
@@ -163,8 +163,9 @@
 }
 
 .weui-search-bar__cancel-btn {
-  margin-left: 10px;
+  margin-left: 8px;
   line-height: 34px;
   color: #635BA2;
+  font-size: 12px;
   white-space: nowrap;
 }
