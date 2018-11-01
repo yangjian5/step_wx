@@ -89,7 +89,6 @@ Page({
       data: params3,
       method: 'GET',
       success: function (res) {
-        console.log(res)
 
         var isSuccess = res.data.message == "createActiveOk";
 
@@ -98,8 +97,7 @@ Page({
           content: res.data.data,
           showCancel: false,
           success: function(res){
-            console.log(res);
-            if (self.data.message != 'createActiveError') {
+            if (isSuccess) {
               if (res.confirm) {
                 if (self.data.enterType == "4") {
                   console.log(self.data.enterType);
@@ -107,7 +105,6 @@ Page({
                     url: '../show/show',
                   });
                 } else {
-                  console.log(11111111);
                   wx.navigateBack();
                 }
               }

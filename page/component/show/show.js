@@ -169,11 +169,23 @@ Page({
       if (index == tempFilePaths.length) {   //当图片传完时，停止调用 
         index = 0;
         console.log('1执行完毕');
-        wx.showToast({
-          title: '图片上传成功',
-          icon: 'none',
-          duration: 1000
-        });
+        // wx.showToast({
+        //   title: '图片上传成功',
+        //   icon: 'none',
+        //   duration: 1000
+        // });
+
+        wx.showModal({
+          title: '提示',
+          content: '信息保存成功',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              wx.navigateBack();
+            }
+          }
+        })
+
       } else {//若图片还没有传完，则继续调用函数
         self.uploadimg(tempFilePaths, index);
       }
@@ -236,11 +248,23 @@ Page({
               if (index == tempFilePaths.length) {   //当图片传完时，停止调用 
                 index = 0;
                 console.log('执行完毕');
-                wx.showToast({
-                  title: '图片上传成功',
-                  icon: 'none',
-                  duration: 1000
-                });
+                // wx.showToast({
+                //   title: '图片上传成功',
+                //   icon: 'none',
+                //   duration: 1000
+                // });
+
+                wx.showModal({
+                  title: '提示',
+                  content: '信息保存成功',
+                  showCancel: false,
+                  success: function (res) {
+                    if (res.confirm) {
+                      wx.navigateBack();
+                    }
+                  }
+                })
+                
               } else {//若图片还没有传完，则继续调用函数
                 console.log(index);
                 self.uploadimg(tempFilePaths, index);

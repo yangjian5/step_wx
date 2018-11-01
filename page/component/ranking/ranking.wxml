@@ -20,13 +20,7 @@
             <view class="news_data">
                   <image src="{{myZanUser.avatarurl}}" wx:for="{{myRank.zanUser}}" wx:for-index="index" wx:for-item="myZanUser" wx:key="myZanUserShow"></image>          
             </view>
-        </view>
-
-
-          <view  style="flex:1;">
-            <button bindtap='submitZan' class='btn' id="{{rank.userid}}">点赞</button>
-          </view>
-        
+        </view>        
     </view>
 
 

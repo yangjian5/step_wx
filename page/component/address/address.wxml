@@ -5,7 +5,7 @@
             
             <input type="number" name="phone" value="{{address.telnum}}" placeholder="电话号码"/>
 
-            <input name="cityInfo" value="{{cityinfo}}" placeholder="省市选择" bindfocus='translate'/>
+            <input name="cityInfo" disabled="true" value="{{cityinfo}}" placeholder="省市选择" bindtap='translate'/>
 
             <input name="detail" value="{{address.addressinfo}}" placeholder="详细地址"/>
 

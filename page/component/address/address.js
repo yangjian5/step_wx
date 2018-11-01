@@ -61,11 +61,15 @@ Page({
         data: params,
         method: 'GET',
         success: function (res) {
-          console.log(res)
           wx.showModal({
             title: '提示',
             content: res.data.data,
-            showCancel: false
+            showCancel: false,
+            success: function (res) {
+              if (res.confirm) {
+                wx.navigateBack();
+              }
+            }
           })
         }
       });
