@@ -20,7 +20,6 @@ Page({
   },
   onLoad(options){
     $init(this)
-
     var self = this;
 
     wx.getStorage({
@@ -39,10 +38,17 @@ Page({
             console.log(res)
             if (res.data.code == 200) {
               if (res.data.data) {
-                self.setData({
-                  title: res.data.data.title,
-                  content: res.data.data.showdesc
-                })
+                if (options.type) {
+                  self.setData({
+                    title: '',
+                    content: ''
+                  })
+                } else {
+                  self.setData({
+                    title: res.data.data.title,
+                    content: res.data.data.showdesc
+                  })
+                }
               }
               if (res.data.data.showurl) {
                 self.setData({

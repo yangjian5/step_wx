@@ -102,7 +102,7 @@ Page({
                 if (self.data.enterType == "4") {
                   console.log(self.data.enterType);
                   wx.redirectTo({
-                    url: '../show/show',
+                    url: '../show/show?type=enter',
                   });
                 } else {
                   wx.navigateBack();

@@ -156,16 +156,16 @@
   left: 0;
   z-index: 2;
   border-radius: 3px;
-  text-align: center;
+  text-align: left;
   color: #9b9b9b;
   background: #fff;
   line-height: 28px;
 }
 
 .weui-search-bar__cancel-btn {
-  margin-left: 5px;
+  margin-left: 3px;
   line-height: 34px;
   color: #635BA2;
-  font-size: 11px;
+  font-size: 10px;
   white-space: nowrap;
 }
