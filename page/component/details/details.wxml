@@ -8,6 +8,10 @@
         <view class="goods-operation" bindtap="addToCart">兑   换</view>
         <view class="goods-price">能量数： {{goods.salecoin}} 
           <text class="goods-log" space="nbsp">         库存: {{goods.count}}</text></view>
+        <view class="goods-price">
+          <text class="change-info" space="nbsp">下单后联系客服选择颜色等信息，或等待客服和您确认信息</text>
+        </view>
+          
         </view>
     <view class="goods-tab-nav.on">兑换记录</view>
      <view wx:for="{{changeGoodLogs}}" wx:for-index="index" wx:for-item="changeGoodLog" wx:key="changeGoodLogShow">

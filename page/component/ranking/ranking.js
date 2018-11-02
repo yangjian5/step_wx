@@ -37,7 +37,7 @@ Page({
     };
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'https://www.aiwsport.com/step/get_active_top.json',
+      url: 'http://127.0.0.1:8866/step/get_active_top.json',
       data: params,
       method: 'GET',
       success: function (res) {
@@ -54,7 +54,7 @@ Page({
     };
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'https://www.aiwsport.com/step/get_active_top.json',
+      url: 'http://127.0.0.1:8866/step/get_active_top.json',
       data: params,
       method: 'GET',
       success: function (res) {
@@ -73,7 +73,7 @@ Page({
     
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'https://www.aiwsport.com/step/zan_active.json',
+      url: 'http://127.0.0.1:8866/step/zan_active.json',
       data: params,
       method: 'GET',
       success: function (res) {
@@ -81,7 +81,7 @@ Page({
         if (res.data.code == 403) {
           iconText = "none";
         }
-
+        console.log(res)
         wx.showToast({
           title: res.data.message,
           icon: iconText,

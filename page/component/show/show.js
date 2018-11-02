@@ -165,9 +165,22 @@ Page({
       self.uploadimg(tempFilePaths, 0);
     }
   },
+
   uploadimg(tempFilePaths, index) {
     var self = this;
     console.log(tempFilePaths[index] + '====' + index)
+
+    // wx.getImageInfo({
+    //   src: tempFilePaths[index],
+    //   success: function (res) {
+    //     self.setData({
+    //       imgwidth: res.width,
+    //       imgheight: res.height,
+
+
+    //     })
+    //   }
+    // });
 
     if (tempFilePaths[index].indexOf("www.aiwsport.com") > 0) {
       // 图片修改情况，不需要修改的图片

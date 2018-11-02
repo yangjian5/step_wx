@@ -31,7 +31,7 @@
 
         <!-- 时间、删除按钮、点赞评论按钮 -->
         <view class='TDD-view'>
-          <label>2018-07-25 10:14:23</label>
+          <label>{{createTime}}</label>
           <!-- <button bindtap='delete'>删除</button> -->
           <image data-isShow='{{true}}' bindtap='TouchDiscuss' src='/image/wxdiscuss.png'></image>
         </view>

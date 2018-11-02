@@ -27,6 +27,7 @@ Page({
     resource: [],
     zanSource: ['张三', '李四', '王五'],
     comments: [],
+    createTime:'',
     photoWidth: wx.getSystemInfoSync().windowWidth / 3.6,
 
     popTop: 0, //弹出点赞评论框的位置
@@ -59,6 +60,7 @@ Page({
             that.setData({
               content: res.data.data.showdesc,
               activeStepId: res.data.data.id,
+              createTime: res.data.data.createtime,
               icon: option.avatarurl,
               nickname: option.nickname
             })
@@ -200,6 +202,13 @@ Page({
                   hiddenmodalput: !that.data.hiddenmodalput
                 })
                 that.getComments(that.data.activeStepId);
+              } else {
+                wx.showToast({
+                  title: res.data.message,
+                  icon: 'none',
+                  duration: 1500,
+                  mask: true
+                });
               }
             }
           });

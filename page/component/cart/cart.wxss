@@ -35,7 +35,7 @@
     width:260rpx; 
     height:60rpx; 
     line-height: 60rpx; 
-    margin-top:120rpx; 
+    margin-top:100rpx; 
     color: #fff;
     overflow:show;
     background-color: #635BA2;

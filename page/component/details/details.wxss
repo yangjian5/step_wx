@@ -149,3 +149,8 @@
 .goods-log{
     font-size: 28rpx;
 }
+
+.change-info{
+    font-size: 20rpx;
+    color: red;
+}
