@@ -45,7 +45,7 @@
 
 
           <view  style="flex:1;">
-            <button bindtap='submitZan' class='btn' id="{{rank.userid}}">点赞</button>
+            <button bindtap='submitZan' class='btn' id="{{rank.userid}}" data-reply-Type="{{index}}">点赞</button>
           </view>
         
     </view>
