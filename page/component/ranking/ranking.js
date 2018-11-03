@@ -1,6 +1,6 @@
 var authsign = require('../utils/authsign.js')
 var WxSearch = require('../wxSearchView/wxSearchView.js');
-
+var app = getApp();
 Page({
   data: {
     rankList:[],
@@ -73,6 +73,7 @@ Page({
   },
   submitZan: function (event) {
     var self = this;
+
     var params = {
       userId: event.currentTarget.id,
       zanUserId: self.data.userId
@@ -84,6 +85,20 @@ Page({
       data: params,
       method: 'GET',
       success: function (res) {
+        console.log(res);
+        if (res.data.code == 200) {
+          var index = event.currentTarget.dataset.replyType;
+          var rankList = self.data.rankList
+          var userInfo = app.globalData.userInfo;
+          var zan = { avatarurl: userInfo.avatarUrl }
+          var zanUser = rankList[index].zanUser;
+          rankList[index].zanUser = [zan].concat(zanUser);
+          rankList[index].sumstep = rankList[index].sumstep + 500;
+          self.setData({
+            rankList: rankList
+          });
+        }
+
         wx.showToast({
           title: res.data.message,
           icon: 'none',
