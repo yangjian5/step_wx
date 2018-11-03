@@ -10,6 +10,13 @@ Page({
   onLoad: function (options) {
     var self = this;
 
+    wx.showToast({
+      title: '点击选手头像可以获得更多选手信息哦',
+      icon: 'none',
+      duration: 2500,
+      mask: true
+    })
+
     WxSearch.init(
       self,  // 本页面一个引用
       [], // 热点搜索推荐，[]表示不使用
@@ -37,7 +44,7 @@ Page({
     };
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'http://127.0.0.1:8866/step/get_active_top.json',
+      url: 'https://www.aiwsport.com/step/get_active_top.json',
       data: params,
       method: 'GET',
       success: function (res) {
@@ -54,7 +61,7 @@ Page({
     };
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'http://127.0.0.1:8866/step/get_active_top.json',
+      url: 'https://www.aiwsport.com/step/get_active_top.json',
       data: params,
       method: 'GET',
       success: function (res) {
@@ -73,21 +80,16 @@ Page({
     
     params.sign = authsign.auth_sign(params);
     wx.request({
-      url: 'http://127.0.0.1:8866/step/zan_active.json',
+      url: 'https://www.aiwsport.com/step/zan_active.json',
       data: params,
       method: 'GET',
       success: function (res) {
-        var iconText = "success";
-        if (res.data.code == 403) {
-          iconText = "none";
-        }
-        console.log(res)
         wx.showToast({
           title: res.data.message,
-          icon: iconText,
+          icon: 'none',
           duration: 2000,
           mask: true
-        })
+        });
       }
     });
   },
