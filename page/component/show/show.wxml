@@ -3,15 +3,15 @@
     <view class="question-input-area">
       <!-- 问题标题  -->
       <view class="question-title-wrap">
-        <input class="question-title" placeholder="请输入标题" maxlength="20" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput" value='{{title}}'></input>
-        <view class="title-input-counter">{{titleCount}}/20</view>
+        <input class="question-title" placeholder="请输入标题" maxlength="26" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput" value='{{title}}'></input>
+        <view class="title-input-counter">{{titleCount}}/26</view>
       </view>
       <!-- 问题正文  -->
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="请输入问题的正文内容。" maxlength="260" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 12rem; padding-left: 28rpx;" bindinput="handleContentInput" value='{{content}}'/>
-            <view class="weui-textarea-counter">{{contentCount}}/260</view>
+            <textarea class="weui-textarea" placeholder="请输入问题的正文内容。" maxlength="1000" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 12rem; padding-left: 28rpx;" bindinput="handleContentInput" value='{{content}}'/>
+            <view class="weui-textarea-counter">{{contentCount}}/1000</view>
           </view>
         </view>
       </view>

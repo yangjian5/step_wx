@@ -46,7 +46,9 @@ Page({
                 } else {
                   self.setData({
                     title: res.data.data.title,
-                    content: res.data.data.showdesc
+                    content: res.data.data.showdesc,
+                    titleCount: res.data.data.title.length,
+                    contentCount: res.data.data.showdesc.length
                   })
                 }
               }
@@ -94,7 +96,9 @@ Page({
   },
 
   removeImage(e) {
+    console.log(22222);
     console.log(e);
+    console.log(11111);
     var self = this;
     var params = {
       urlImg: e.target.dataset.url,
@@ -139,22 +143,35 @@ Page({
     var self = this;
     const title = this.data.title
     const content = this.data.content
-
     if (title && content) {
       var params = {
         userId: self.data.userId,
         title: title,
         showDesc: content
       };
-      params.sign = authsign.auth_sign(params);
+      // params.sign = authsign.auth_sign(params);
       wx.request({
-        url: 'https://www.aiwsport.com/step/add_show_info.json',
+        url: 'https://www.aiwsport.com/go/add_show_info.json',
         data: params,
         method: 'GET',
         success: function (res) {
           if (res.data.code == 403) {
             console.log('add_show_info is fail');
+          } else{
+            if (self.data.images.length == 0 || self.data.images.length < 0) {
+              wx.showModal({
+                title: '提示',
+                content: '信息保存成功',
+                showCancel: false,
+                success: function (res) {
+                  if (res.confirm) {
+                    wx.navigateBack();
+                  }
+                }
+              });
+            }
           }
+          
         }
       });
     }
@@ -282,7 +299,7 @@ Page({
                       wx.navigateBack();
                     }
                   }
-                })
+                });
                 
               } else {//若图片还没有传完，则继续调用函数
                 console.log(index);

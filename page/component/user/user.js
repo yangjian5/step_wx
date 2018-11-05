@@ -35,7 +35,8 @@ Page({
 
         var params = {
           userId: res.data,
-          enterType: '4'
+          enterType: '4',
+          channel: 'user'
         };
         params.sign = authsign.auth_sign(params);
         wx.request({

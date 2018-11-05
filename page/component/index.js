@@ -74,8 +74,12 @@ Page({
           },
           success: function (res) {
             var obj = res.data;
+            
+            var re = /([0-9]+.[0-9]{2})[0-9]*/;
+            var aNew = obj.coinnum.replace(re, "$1");
+
             that.setData({
-              coinNum: parseInt(obj.coinnum),
+              coinNum: aNew,
               userId: obj.userid
             })
 
@@ -280,8 +284,10 @@ Page({
       method: 'GET',
       success: function (res) {
         var user = res.data.data
+        var re = /([0-9]+.[0-9]{2})[0-9]*/;
+        var aNew = (user.coinnum+"").replace(re, "$1");
         self.setData({
-          coinNum: parseInt(user.coinnum)
+          coinNum: aNew
         })
       }
     });
@@ -345,11 +351,14 @@ Page({
           cxt_arc.fillText('点击兑换火币', that.data.imageWidth / 4 + 2, 120)         
           cxt_arc.draw();
 
+          var re = /([0-9]+.[0-9]{2})[0-9]*/;
+          var aNew = (res.data.coinnum + "").replace(re, "$1");
+
           that.setData({
             stepNum: 0,
             JiaChenStep:0,
             rewardStep:0,
-            coinNum: parseInt(res.data.coinnum)
+            coinNum: aNew
           });
 
           var num = sumDHStep * 0.0005;
