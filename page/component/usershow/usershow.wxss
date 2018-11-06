@@ -231,7 +231,7 @@ page{
 .btn-add{
   float: right;
   width: 20%;
-  margin-top: 5rpx;
+  margin-top: 24rpx;
   height:65rpx;
   font-size: 24rpx;
   color: #fff;
@@ -242,8 +242,12 @@ page{
 }
 
 .message-input{
-  margin-top: 5rpx;
+  margin-top: 45rpx;
   width: 80%;
-  height:65rpx;
+  height:80rpx;
   border-bottom: 1rpx solid #635BA2;
+}
+
+.section-input{
+  height:120rpx;
 }

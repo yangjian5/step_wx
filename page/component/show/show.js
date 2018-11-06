@@ -29,13 +29,11 @@ Page({
           userId: res.data
         };
         params.sign = authsign.auth_sign(params);
-        console.log(params)
         wx.request({
           url: 'https://www.aiwsport.com/step/get_step_for_4.json',
           data: params,
           method: 'GET',
           success: function (res) {
-            console.log(res)
             if (res.data.code == 200) {
               if (res.data.data) {
                 if (options.type) {
@@ -52,6 +50,7 @@ Page({
                   })
                 }
               }
+              console.log(res.data.data.showurl.split(","))
               if (res.data.data.showurl) {
                 self.setData({
                   images: res.data.data.showurl.split(",")
@@ -96,27 +95,32 @@ Page({
   },
 
   removeImage(e) {
-    console.log(22222);
-    console.log(e);
-    console.log(11111);
     var self = this;
     var params = {
       urlImg: e.target.dataset.url,
       userId: self.data.userId
     };
     params.sign = authsign.auth_sign(params);
-    console.log(params)
     wx.request({
       url: 'https://www.aiwsport.com/step/del_img.do',
       data: params,
       method: 'GET',
       success: function (res) {
-        console.log(res)
         if (res.statusCode == 200) {
           if (res.data == "sucess") {
-            const idx = e.target.dataset.idx
-            self.data.images.splice(idx, 1)
-            $digest(self)
+            var delurl = e.target.dataset.url;
+            const idx = e.target.dataset.idx;
+            var imgs = self.data.images;
+            console.log(imgs)
+            if (delurl.indexOf("www.aiwsport.com") > 0) {
+              var newUrls = imgs.splice(idx+1, 1)
+              self.setData({
+                images: newUrls
+              });
+            } else {
+              imgs.splice(idx, 1)
+              $digest(self)
+            }
           }
         } else {
           wx.showToast({
@@ -178,7 +182,6 @@ Page({
 
     var tempFilePaths = this.data.images;
     if (tempFilePaths.length > 0) {
-      console.log(tempFilePaths);
       self.uploadimg(tempFilePaths, 0);
     }
   },
@@ -204,7 +207,6 @@ Page({
       index++;
       if (index == tempFilePaths.length) {   //当图片传完时，停止调用 
         index = 0;
-        console.log('1执行完毕');
         // wx.showToast({
         //   title: '图片上传成功',
         //   icon: 'none',
@@ -250,7 +252,6 @@ Page({
         destHeight: 800,
         canvasId: canName,
         success: function (res) {
-          console.log(res)
           wx.uploadFile({
             url: 'https://www.aiwsport.com/go/upload_img.do',      //此处换上你的接口地址
             filePath: res.tempFilePath,
@@ -266,10 +267,8 @@ Page({
             },
             success: function (res) {
               var data = res.data;
-              console.log(data);
             },
             fail: function (res) {
-              console.log('fail');
               console.log(res);
               wx.showToast({
                 title: '失败~',
@@ -283,7 +282,6 @@ Page({
 
               if (index == tempFilePaths.length) {   //当图片传完时，停止调用 
                 index = 0;
-                console.log('执行完毕');
                 // wx.showToast({
                 //   title: '图片上传成功',
                 //   icon: 'none',
@@ -302,7 +300,6 @@ Page({
                 });
                 
               } else {//若图片还没有传完，则继续调用函数
-                console.log(index);
                 self.uploadimg(tempFilePaths, index);
               }
             }

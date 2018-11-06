@@ -10,13 +10,6 @@ Page({
   onLoad: function (options) {
     var self = this;
 
-    wx.showToast({
-      title: '点击选手头像可以获得更多选手信息哦',
-      icon: 'none',
-      duration: 2500,
-      mask: true
-    })
-
     WxSearch.init(
       self,  // 本页面一个引用
       [], // 热点搜索推荐，[]表示不使用

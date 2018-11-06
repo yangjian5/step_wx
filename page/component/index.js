@@ -252,8 +252,9 @@ Page({
       console.log(ops.target)
     }
     return {
-      title: '步易',
+      title: '步数免费换商品，走路也能做公益',
       path: 'page/component/auth/auth?fx_muser_id=' + self.data.userId,
+      imageUrl: '/image/fx.jpg',
       success: function (res) {
         // 转发成功
         console.log("转发成功:" + JSON.stringify(res));
@@ -291,6 +292,33 @@ Page({
         })
       }
     });
+  },
+
+  onPullDownRefresh: function () {
+    var self = this
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+    //模拟加载
+    setTimeout(function () {
+      // complete
+
+      var paramsFx = {
+        mUserId: self.data.userId
+      }
+      paramsFx.sign = authsign.auth_sign(paramsFx);
+      wx.request({
+        url: 'https://www.aiwsport.com/step/get_share_user.json',
+        data: paramsFx,
+        method: 'GET',
+        success: function (res) {
+          self.setData({
+            friends: res.data.data
+          })
+        }
+      });
+      
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1500);
   },
 
   changeCoin: function(){

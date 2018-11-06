@@ -11,7 +11,8 @@ Page({
     scaleCart: false,
     userId: 0,
     goodId:0,
-    changeGoodLogs:[]
+    changeGoodLogs:[],
+    gongyi:false
   },
 
   addToCart() {
@@ -55,6 +56,12 @@ Page({
         })
       }
     })
+
+    if (option.gongyi) {
+      self.setData({
+        gongyi: option.gongyi
+      });
+    }
 
     self.setData({
       goodId: option.goodId

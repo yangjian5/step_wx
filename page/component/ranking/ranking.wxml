@@ -6,13 +6,13 @@
 
     <view class="news_list" wx:for="{{myRankList}}" wx:for-index="index" wx:for-item="myRank" wx:key="changeMyRankShow">
 
-    <navigator class="child" url="../usershow/usershow?showUserId={{myRank.userid}}&avatarurl={{myRank.avatarurl}}&nickname={{myRank.nickname}}">
+      <navigator class="child" url="../usershow/usershow?showUserId={{myRank.userid}}&avatarurl={{myRank.avatarurl}}&nickname={{myRank.nickname}}">
         <view class="news_left">
             <image src="{{myRank.avatarurl}}"></image>
             <text class="news_date">{{myRank.nickname}}</text>
         </view>
 
-    </navigator>
+    
         <view class="news_right">
             <text space="nbsp" class="news_title news_text">       第{{myRank.index+1}}名    -叶片量：{{myRank.sumstep}} </text> 
             <text class="news_subTitle news_text">{{myRank.showtitle}}</text>
@@ -20,20 +20,22 @@
             <view class="news_data">
                   <image src="{{myZanUser.avatarurl}}" wx:for="{{myRank.zanUser}}" wx:for-index="index" wx:for-item="myZanUser" wx:key="myZanUserShow"></image>          
             </view>
-        </view>        
+        </view> 
+
+      </navigator>         
     </view>
 
 
 
     <view class="news_list" wx:for="{{rankList}}" wx:for-index="index" wx:for-item="rank" wx:key="changeRankShow">
 
-    <navigator class="child" url="../usershow/usershow?showUserId={{rank.userid}}&avatarurl={{rank.avatarurl}}&nickname={{rank.nickname}}">
+      <navigator class="child" url="../usershow/usershow?showUserId={{rank.userid}}&avatarurl={{rank.avatarurl}}&nickname={{rank.nickname}}">
         <view class="news_left">
             <image src="{{rank.avatarurl}}"></image>
             <text class="news_date">{{rank.nickname}}</text>
         </view>
 
-    </navigator>
+    
         <view class="news_right">
             <text space="nbsp" class="news_title news_text">       第{{index+1}}名    -叶片量：{{rank.sumstep}} </text> 
             <text class="news_subTitle news_text">{{rank.showtitle}}</text>
@@ -43,7 +45,7 @@
             </view>
         </view>
 
-
+      </navigator>
           <view  style="flex:1;">
             <button bindtap='submitZan' class='btn' id="{{rank.userid}}" data-reply-Type="{{index}}">点赞</button>
           </view>

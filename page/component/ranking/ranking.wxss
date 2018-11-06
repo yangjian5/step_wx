@@ -63,8 +63,8 @@ view {
 
 .news_list {
     width: 100%;
-    border-bottom: 8rpx solid #bcbcbc;
-    padding-top: 25rpx;
+    border-bottom: 10rpx solid #DCDCDC;
+    padding-top: 20rpx;
 }
 
 .news_left {
@@ -74,16 +74,17 @@ view {
 }
 
 .news_left image {
-    width: 155rpx;
-    height: 150rpx;
+    width: 135rpx;
+    height: 128rpx;
     overflow:show;
-    border-radius: 50rpx 50rpx 50rpx 50rpx;
+    border-radius: 30rpx 30rpx 30rpx 30rpx;
+    margin-left: 5rpx;
 }
 
 .news_data image {
     margin-left: 20rpx;
-    width: 40rpx;
-    height: 40rpx;
+    width: 30rpx;
+    height: 30rpx;
     overflow:show;
     border-radius: 60rpx 60rpx 60rpx 20rpx;
 }
@@ -97,7 +98,7 @@ view {
 }
 
 .news_date{
-    width: 156rpx;
+    width: 136rpx;
     font-size: 23rpx;
     color: #ffffff;
     display: block;
@@ -105,6 +106,7 @@ view {
     bottom: 0px;
     background-color: #000000;
     text-align: center;
+    margin-left: 5rpx;
 }
 
 .news_right {
@@ -114,8 +116,8 @@ view {
 }
 
 .news_right text {
-    margin-top: 15rpx;
-    margin-bottom: 15rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
 }
 /*处理字符串过长的展示*/
 .news_text {
@@ -128,9 +130,9 @@ view {
 
 .news_title {
     width: 95%;
-    font-size: 26rpx;
+    font-size: 24rpx;
     font-weight:bold;
-    line-height: 30rpx;
+    line-height: 24rpx;
     text-align: left;
     color: #635BA2;
 }
@@ -138,10 +140,10 @@ view {
 .news_subTitle {
     width: 98%;
     display: block;
-    font-size: 26rpx;
+    font-size: 22rpx;
     color: orange;
     text-align: center;
-    line-height: 30rpx;
+    line-height: 22rpx;
 }
 
 .news_data{

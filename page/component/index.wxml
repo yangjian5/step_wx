@@ -28,9 +28,24 @@
         
     </view>
 
-     
-    
-    </view>    
+    </view> 
+
+<!-- <view class="newest">
+    <view class="newest-title"><text>步易森林 </text> <text style="font-size:18rpx;font-style:italic;"> ——我们一起来植树</text></view>
+    <view class="newest-box" >
+        <view class="newest-list" wx:for="{{newUserGoods}}" wx:for-index="index" wx:for-item="newUserGood" wx:key="newUserGoodsShow">
+            <navigator url="/page/component/details/details?goodId={{newUserGood.id}}">
+                <image src="{{newUserGood.imagesurl}}"></image>
+                <view class="newest-text">
+                  <text space="nbsp">{{newUserGood.goodName}}    </text>
+                  <image style="width: 26rpx; height: 26rpx;" mode="aspectFit" src="/image/nglb.jpg"></image>
+                  <text style='font-style: italic;'> .{{newUserGood.salecoin}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view> -->
+
 <view class="newest">
     <view class="newest-title"><text>新人专享 </text> <text style="font-size:18rpx;font-style:italic;"> ——免费兑换&包邮</text></view>
     <view class="newest-box" >

@@ -69,7 +69,9 @@
 </view>
 
 <view hidden="{{hiddenmodalput}}" class="section-input">
-  <input bindinput="bindKeyInput" class="message-input" value='{{inputContent}}' focus="{{name_focus}}"/>
+  <!-- <input bindinput="bindKeyInput" class="message-input" value='{{inputContent}}' focus="{{name_focus}}"/> -->
+
+  <textarea bindinput="bindKeyInput" class="message-input" value='{{inputContent}}' focus="{{name_focus}}" adjust-position="false" auto-height="true" cursor-spacing="7px" maxlength="30"/>
   <button bindtap="createConent" class='btn-add'>评论</button>
 </view>
 

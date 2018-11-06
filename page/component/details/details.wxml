@@ -9,7 +9,12 @@
         <view class="goods-price">能量数： {{goods.salecoin}} 
           <text class="goods-log" space="nbsp">         库存: {{goods.count}}</text></view>
         <view class="goods-price">
-          <text class="change-info" space="nbsp">下单后联系客服选择颜色等信息，或等待客服和您确认信息</text>
+          <block wx:if="{{gongyi}}">
+            <text class="change-info" space="nbsp">每年植树节步易平台将组织公益植树活动，届时会邀请您到现场亲手种下您兑换的树苗。如果您不能亲临现场步易平台也会替您种下您的树苗并且拍照发到您的手机上。每颗树苗都会有您的专属编号也会为您颁发环保证书。种一棵树送给爱人，让你们的爱情枝繁叶茂。种一棵树送给孩子，在孩子心中种下一片希望。种一棵树送给朋友，让我们的友谊地久天长。聚集每个人的一小份力量会创造无限可能，这是我们对地球的一点善意，您的一份坚持会换来一片绿色森林。</text>
+          </block>
+          <block wx:else>
+            <text class="change-info" space="nbsp">下单后联系客服选择颜色等信息，或等待客服和您确认信息</text>
+          </block>
         </view>
           
         </view>
