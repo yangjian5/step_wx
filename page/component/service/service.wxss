@@ -32,3 +32,8 @@
   margin-bottom: 30rpx;
 }
 
+.byql-image{
+  width: 300rpx;
+  height: 300rpx;
+}
+
