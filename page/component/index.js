@@ -190,6 +190,14 @@ Page({
                     })
                   }
                 });
+              },
+              fail: function (res) {
+                console.log(res);
+                wx.showModal({
+                  title: '提示',
+                  content: res.errMsg,
+                  showCancel: false
+                });
               }
             })
           }
